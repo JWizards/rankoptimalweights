@@ -1,7 +1,3 @@
-
-library(tidyverse)
-
-
 write_CIP <- function(table, comp, path = "", bounds = c(0, 5)) {
   nComp <- nrow(table)
   nInd <- ncol(table)
@@ -171,6 +167,16 @@ write_CIP <- function(table, comp, path = "", bounds = c(0, 5)) {
 
 
 
+#' Rank Best Optimal Weights
+#'
+#' @param table Table of indicators
+#' @param bounds Bounds for integer weights (default 0-5)
+#' @param cleanup Flag to remove .cip and .sol files (default TRUE)
+#'
+#' @return A table of weights in order of competitors
+#' @export
+#'
+#' @examples
 rank_best <- function(table, bounds = c(0, 5), cleanup = TRUE) {
   nComp <- nrow(table)
   nInd <- ncol(table)
