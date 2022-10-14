@@ -197,7 +197,7 @@ rank_best <- function(table, bounds = c(0, 5), cleanup = TRUE) {
       as.character(i),
       ".cip\" -c \"optimize\" -c \"write solution temp/comp_",
       as.character(i),
-      ".sol\""
+      ".sol\" -c \"quit\""
     ))
   }
   
