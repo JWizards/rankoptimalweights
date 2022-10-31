@@ -39,7 +39,7 @@ library(rankoptimalweights)
 
 countries <- read.csv("man/example_data/oecd_betterlife_2013.csv")
 select_indicators <- countries[75:85]
-rank_best(select_indicators)
+solution_weights <- rank_best(select_indicators)
 
 # loads example data (Countries by their indicators from oecd_betterlife index and selects a table of the relevent indicators)
 ```
