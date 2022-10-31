@@ -1,3 +1,6 @@
+
+#---------------------Write CIP function---------------------------
+  
 write_CIP <- function(table, comp, path = "", bounds = c(0, 5)) {
   nComp <- nrow(table)
   nInd <- ncol(table)
@@ -113,7 +116,7 @@ write_CIP <- function(table, comp, path = "", bounds = c(0, 5)) {
   
   
   
-  #--------- Generating CIP file
+  #--------- Generating CIP file -------------------------------------------------------------
   f <- file(str_c(path, "comp_", as.character(comp), ".cip"))
   
   
@@ -174,6 +177,8 @@ write_CIP <- function(table, comp, path = "", bounds = c(0, 5)) {
 #' @param cleanup Flag to remove .cip and .sol files (default TRUE)
 #'
 #' @return A table of weights in order of competitors
+#' 
+#' @import stringr
 #' @export
 #'
 #' @examples
